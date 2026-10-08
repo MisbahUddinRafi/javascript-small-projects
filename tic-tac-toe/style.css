@@ -1,0 +1,118 @@
+:root {
+    --background-color: #E0E2DB; 
+    --box-color: #5F7470; 
+    --box-hover-color: #B8BDB5; 
+    --text-color: #5F7470; 
+}
+
+* {
+    margin: 0;  
+    padding: 0 
+} 
+  
+body {
+    background-color: #D2D4C8; 
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: center; 
+}
+
+#heading {
+    font-size: 8vmin; 
+    margin: 5vmin; 
+
+}
+
+
+#container {
+    align-items: center; 
+    justify-content: center; 
+    height: 70vh;  
+    display: flex;  
+    flex-direction: column; 
+    gap: 2vmin; 
+    margin-bottom: 10vh;
+} 
+
+#game {
+    align-items: center; 
+    justify-content: center; 
+    width: 60vmin;  
+    height: 60vmin; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1.5vmin;  
+} 
+
+.box {
+    width: 18vmin; 
+    height: 18vmin; 
+    border: none; 
+    border-radius: 1vmin; 
+    background-color: var(--box-color); 
+    color: white; 
+    font-size: 12vmin; 
+} 
+
+.box:hover {
+    background-color: var(--box-hover-color); 
+    cursor: pointer; 
+} 
+
+.box:disabled {
+    background-color: #889696; 
+}
+
+#restart-btn {
+    padding: 1.5vmin;   
+    text-align: center;
+    font-size: 4vmin; 
+    border: none; 
+    border-radius: 3vmin;  
+    background-color: black; 
+    color: white;  
+    margin: 2vmin;  
+} 
+
+#restart-btn:hover {
+    scale: 1.05;
+    cursor: pointer; 
+}
+
+
+.result-div {
+    font-size: 5vmin; 
+    align-items: center; 
+    justify-content: center;
+    display: flex; 
+    flex-direction: column; 
+    margin: 2vmin; 
+    height: 90vmin; 
+    gap: 5vmin; 
+} 
+
+#newGameBtn {
+    padding: 1.5vmin; 
+    text-align: center;
+    justify-content: center;
+    font-size: 4vmin; 
+    border: none; 
+    border-radius: 3vmin;  
+    background-color: black; 
+    color: white;  
+    margin: 2vmin; 
+} 
+
+#newGameBtn:hover {
+    scale: 1.05; 
+    cursor: pointer; 
+} 
+
+
+.hidden {
+    display: none;
+}
+
+#currentPlayer {
+    font-size: 5vmin;  
+    margin: 5vmin; 
+}

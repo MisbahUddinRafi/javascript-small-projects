@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="header">Rock Paper Scissor</h1>
+
+    <div class="input-bar">
+        <div class="img-div" id="rock-div">
+            <img src="images/rock.png" id="rock" class="img">
+            <p class="input-text">Rock</p>
+        </div>
+
+        <div class="img-div" id="paper-div">
+            <img src="images/paper.png" id="paper" class="img">
+            <p class="input-text">Paper</p>
+        </div>
+
+        <div class="img-div" id="scissor-div">
+            <img src="images/scissor.png" id="scissor" class="img">
+            <p class="input-text">Scissor</p>
+        </div>
+    </div>
+
+    <div id="playzone-div">
+        <div class="playarea" id="user-side">
+            <p>Your Symbol</p>  
+            <!-- <div id="userSymbol"></div> -->
+        </div>
+
+        <div class="playarea" id="score">
+            <p>Your Score</p> 
+            <p id="playerScore"></p>
+            <p>Computers Score</p>
+            <p id="computerScore"></p> 
+            <p>Last Round Winner</p> 
+            <p id="lastRoundWinner"></p>
+        </div>
+
+        <div class="playarea" id="computer-side">
+            <p>Computers Symbol</p>
+            <!-- <div id="computerSymbol"></div> -->
+        </div>
+    </div>
+
+    <div id="btn-div"> 
+        <button id="reset-btn">Reset</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

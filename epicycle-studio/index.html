@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+
+    <title>Epicycle Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <a href="#" class="logo">◉ Epicycle<span>Studio</span></a>
+        <span class="tagline">Mathematics meets art</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">FOURIER SERIES VISUALIZER</p>
+            <h1>Every shape has a <span>frequency.</span></h1>
+            <p class="subtitle">
+                Upload an image and watch rotating vectors
+                reconstruct its outline.
+            </p>
+        </section>
+
+        <section class="workspace">
+            <div class="panel controls">
+                <h2>Your image</h2>
+
+                <label class="upload-box" for="imageInput">
+                    <span class="upload-icon">↑</span>
+                    <strong>Choose an image</strong>
+                    <span>PNG, JPG, WebP, GIF, BMP, SVG · Maximum 8 MB</span> </label>
+
+                <input type="file" id="imageInput"
+                    accept="image/png,image/jpeg,image/webp,image/gif,image/bmp,image/svg+xml,image/avif,.png,.jpg,.jpeg,.jfif,.webp,.gif,.bmp,.svg,.avif"
+                    hidden>
+                <div class="source-preview">
+                    <img id="sourceImage" alt="Uploaded image preview" hidden>
+                    <p id="uploadMessage">Your image will appear here.</p>
+                </div>
+
+                <label class="field-label" for="circleCount">
+                    Number of epicycles
+                    <strong id="circleValue">60</strong>
+                </label>
+
+                <input type="range" id="circleCount" min="5" max="180" value="60">
+
+                <div class="range-labels">
+                    <span>Simpler</span>
+                    <span>More detail</span>
+                </div>
+
+                <button id="generateBtn" class="primary-btn" disabled>
+                    Generate epicycles
+                </button>
+
+                <p class="privacy-note">
+                    Your image stays in your browser.
+                </p>
+            </div>
+
+            <div class="panel visualizer">
+                <div class="canvas-heading">
+                    <div>
+                        <h2>Live reconstruction</h2>
+                        <p id="status">Waiting for an image</p>
+                    </div>
+
+                    <button id="playBtn" class="small-btn" disabled>
+                        Pause
+                    </button>
+                </div>
+
+                <div class="canvas-wrap">
+                    <canvas id="drawingCanvas"></canvas>
+                    <div id="canvasPlaceholder">
+                        <span>◎</span>
+                        <p>Your Fourier drawing will appear here</p>
+                    </div>
+                </div>
+
+                <div class="export-row">
+                    <button id="pngBtn" class="secondary-btn" disabled>
+                        Download PNG
+                    </button>
+
+                    <button id="gifBtn" class="primary-btn" disabled>
+                        Export GIF
+                    </button>
+                </div>
+
+                <p class="export-note">
+                    GIF export may take a few seconds.
+                </p>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>From pixels to rotating vectors</h2>
+
+            <div class="steps">
+                <article>
+                    <span>01</span>
+                    <h3>Extract</h3>
+                    <p>Find the largest outer contour in your image.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Transform</h3>
+                    <p>Calculate the complex Fourier coefficients.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Reconstruct</h3>
+                    <p>Rotate the vectors and trace their endpoint.</p>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            Epicycle Studio · Built with HTML, CSS and JavaScript
+        </footer>
+    </main>
+
+    <!-- OpenCV.js: image contour extraction -->
+    <script>
+        var Module = {
+            onRuntimeInitialized() {
+                window.openCVReady = true;
+                window.dispatchEvent(new Event("opencv-ready"));
+            }
+        };
+    </script>
+
+    <script async src="https://docs.opencv.org/4.x/opencv.js">
+    </script>
+
+    <!-- GIF encoder -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js">
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

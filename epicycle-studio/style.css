@@ -1,0 +1,406 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #0b1020;
+    --panel: #111a2e;
+    --border: #26344d;
+    --text: #eef3ff;
+    --muted: #9baac4;
+    --accent: #7c83ff;
+    --cyan: #55e6d0;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.topbar {
+    height: 72px;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--cyan);
+    margin-left: 5px;
+}
+
+.tagline,
+.subtitle,
+.privacy-note,
+.export-note,
+.range-labels,
+#status {
+    color: var(--muted);
+}
+
+.tagline {
+    font-size: 13px;
+}
+
+main {
+    max-width: 1240px;
+    width: 90%;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 0 45px;
+}
+
+.eyebrow {
+    color: var(--cyan);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.subtitle {
+    max-width: 540px;
+    margin: 16px auto 0;
+    line-height: 1.7;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    min-width: 0;
+}
+
+.panel h2,
+.how-it-works h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 12px;
+    border: 1px dashed #526585;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-box:hover {
+    border-color: var(--cyan);
+    background: #17233b;
+}
+
+.upload-box strong {
+    font-size: 14px;
+}
+
+.upload-box > span:last-child {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.upload-icon {
+    font-size: 28px;
+    color: var(--cyan);
+}
+
+.source-preview {
+    min-height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+    text-align: center;
+}
+
+.source-preview img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.source-preview p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.field-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.field-label strong {
+    color: var(--cyan);
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--cyan);
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    margin: 8px 0 22px;
+}
+
+.primary-btn,
+.secondary-btn,
+.small-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: white;
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: #969bff;
+    transform: translateY(-1px);
+}
+
+.secondary-btn,
+.small-btn {
+    background: #202d45;
+    border: 1px solid #354762;
+    color: var(--text);
+}
+
+.secondary-btn:hover:not(:disabled),
+.small-btn:hover:not(:disabled) {
+    border-color: var(--cyan);
+}
+
+.controls > .primary-btn {
+    width: 100%;
+}
+
+.privacy-note {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.canvas-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.canvas-heading h2 {
+    margin-bottom: 6px;
+}
+
+#status {
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.canvas-wrap {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    background: #080d19;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#drawingCanvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#canvasPlaceholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--muted);
+    pointer-events: none;
+}
+
+#canvasPlaceholder span {
+    color: var(--cyan);
+    font-size: 45px;
+}
+
+#canvasPlaceholder p {
+    font-size: 12px;
+    text-align: center;
+}
+
+.export-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.export-row button {
+    flex: 1;
+}
+
+.export-note {
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+.how-it-works {
+    padding: 65px 0 50px;
+}
+
+.how-it-works h2 {
+    text-align: center;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.steps article {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.steps article > span {
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.steps h3 {
+    margin: 12px 0 8px;
+}
+
+.steps p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+@media (max-width: 850px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        order: 1;
+    }
+
+    .visualizer {
+        order: 2;
+    }
+
+    .canvas-wrap {
+        height: 360px;
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        width: 94%;
+    }
+
+    .topbar {
+        padding: 0 4%;
+    }
+
+    .tagline {
+        font-size: 11px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .canvas-wrap {
+        height: 300px;
+    }
+
+    .export-row {
+        flex-direction: column;
+    }
+}

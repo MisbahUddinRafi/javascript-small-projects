@@ -10,36 +10,35 @@ body {
     justify-content: center;
     display: flex; 
     flex-direction: column; 
-    gap: 2rem; 
-    margin-top: 1rem;
+    gap: 4vmin; 
+    margin-top: 2vmin;
 } 
 
 #container { 
     background-color:white; 
     color: black; 
     display: flex; 
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    border: 2px solid white; 
     border-radius: 12%; 
-    width: 60vw; 
-    height: 60vh;
-    gap: 1rem;  
+    width: 60vmin; 
+    height: 70vmin;
+    gap: 2vmin;  
 }
 
 #amountLabel {
     align-self: flex-start;
     margin-left: 10%;
-    font-size: 16px;
+    font-size: 3vmin;
     font-weight: bold;
 }
 
 #amount {
-    width: 80%; 
-    height: 2rem; 
-    font-size: 1rem; 
-    padding-left: 0.5rem;  
+    width: 80%;  
+    height: 6vmin; 
+    font-size: 3vmin; 
+    padding-left: 1.5vmin;  
     border: 1px solid grey;
     border-radius: 1rem;
 }
@@ -51,7 +50,7 @@ body {
     border: none; 
     border-radius: 1rem; 
     width: 80%;  
-    height: 8rem; 
+    height: 26vmin; 
     background-color: black; 
     color: white; 
     padding-left: 1.5vmin; 
@@ -65,25 +64,21 @@ body {
 }
 
 .flag {
-    width: 5rem; 
+    width: 15vmin; 
 }
 
 .select-tag {
-    width: 5rem; 
+    width: 15vmin; 
     border: 1px solid grey; 
     border-radius: 1rem; 
 } 
 
-option {
-    border: 1px solid lightgray; 
-    border-radius: 1rem;
-}
 
 #outputs-div {
     display: flex; 
     flex-direction: column; 
-    margin-top: 2rem;
-    gap: 1vmin; 
+    margin-top: 4vmin;
+    gap: 1.5vmin; 
     width: 80%; 
 } 
 
@@ -92,9 +87,9 @@ option {
     border-radius: 1rem; 
     align-content: center; 
     justify-content: center;  
-    height: 2rem; 
-    font-size: 1.25rem; 
-    padding-left: 0.5rem; 
+    height: 6vmin; 
+    font-size: 3vmin; 
+    padding-left: 1.5vmin; 
 }
 
 #btn { 
@@ -102,8 +97,8 @@ option {
     border: none;  
     background-color: black; 
     color: white; 
-    height: 2rem; 
-    font-size: 1.25rem; 
+    height: 5vmin; 
+    font-size: 3vmin; 
 }
 
 #btn:hover {

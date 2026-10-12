@@ -34,7 +34,7 @@ body {
     font-weight: bold;
 }
 
-#amount {
+#amount-input {
     width: 80%;  
     height: 6vmin; 
     font-size: 3vmin; 
@@ -63,16 +63,27 @@ body {
     gap: 1vmin; 
 }
 
+.inputs p {
+    font-size: 2.5vmin; 
+}
+
 .flag {
     width: 15vmin; 
 }
 
-.select-tag {
-    width: 15vmin; 
+.curr-list {
+    width: 15vmin;  
     border: 1px solid grey; 
     border-radius: 1rem; 
 } 
 
+.curr-input {
+    width: 13vmin;
+    height: 3vmin; 
+    padding-left: 1.5vmin; 
+    border: 1px solid lightgrey;
+    border-radius: 0.5rem;
+} 
 
 #outputs-div {
     display: flex; 

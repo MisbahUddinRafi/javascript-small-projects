@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 id="heading">Currency Converter</h1>
+
+    <div id="container">
+        <input type="number" placeholder="enter amount" id="amount" value="1">
+
+        <div id="dropdowns">
+            <div class="inputs"> 
+                <p>From Currency</p>
+                <img src="" id="from-flag" alt="from-flag" class="flag">
+
+                <select id="from-select" class="select-tag" name="from">
+                </select>
+            </div>
+
+            <div class="inputs">
+                <p>To Currency</p>
+                <img src="" id="to-flag" alt="to-flag" class="flag">
+
+                <select id="to-select" class="select-tag" name="to">
+                </select>
+            </div> 
+
+        </div>
+        
+        <div id="outputs-div"> 
+            <p id="result">result</p>
+            <button id="btn">convert</button>
+        </div>
+    </div>
+
+    <!-- <img src="https://flagcdn.com/w320/bd.png" width="320" alt="Flag" id="img"> -->
+
+    <script type="module" src="app.js"></script>
+    <script src="countryCodes.js"></script>
+
+</body>
+
+</html>

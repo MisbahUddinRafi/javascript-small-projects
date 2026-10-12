@@ -1,0 +1,105 @@
+* {
+    margin: 0; 
+    padding: 0; 
+} 
+
+body {
+    background-color: black; 
+    color: white; 
+    align-items: center; 
+    justify-content: center;
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+    margin-top: 1rem;
+} 
+
+#container { 
+    background-color:white; 
+    color: black; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid white; 
+    border-radius: 12%; 
+    width: 60vw; 
+    height: 60vh;
+    gap: 1rem;  
+}
+
+#amount {
+    width: 80%; 
+    height: 2rem; 
+    font-size: 1rem; 
+    padding-left: 0.5rem;  
+    border: 1px solid grey;
+    border-radius: 1rem;
+}
+
+#dropdowns {
+    align-items:center;  
+    justify-content: space-between; 
+    display: flex;
+    border: none; 
+    border-radius: 1rem; 
+    width: 80%;  
+    height: 8rem; 
+    background-color: black; 
+    color: white; 
+    padding-left: 1.5vmin; 
+    padding-right: 1.5vmin; 
+} 
+
+.inputs {
+    display: flex; 
+    flex-direction: column; 
+    gap: 1vmin; 
+}
+
+.flag {
+    width: 5rem; 
+}
+
+.select-tag {
+    width: 5rem; 
+    border: 1px solid grey; 
+    border-radius: 1rem; 
+} 
+
+option {
+    border: 1px solid lightgray; 
+    border-radius: 1rem;
+}
+
+#outputs-div {
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 2rem;
+    gap: 1vmin; 
+    width: 80%; 
+} 
+
+#result {
+    border: 1px solid grey; 
+    border-radius: 1rem; 
+    align-content: center; 
+    justify-content: center;  
+    height: 2rem; 
+    font-size: 1.25rem; 
+    padding-left: 0.5rem; 
+}
+
+#btn { 
+    border-radius: 1rem; 
+    border: none;  
+    background-color: black; 
+    color: white; 
+    height: 2rem; 
+    font-size: 1.25rem; 
+}
+
+#btn:hover {
+    scale: 1.05; 
+    cursor: pointer; 
+}

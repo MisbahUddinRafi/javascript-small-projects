@@ -12,10 +12,11 @@
     <h1 id="heading">Currency Converter</h1>
 
     <div id="container">
-        <input type="number" placeholder="enter amount" id="amount" value="1">
+        <label for="amount" id="amountLabel">Enter Amount</label>
+        <input type="number" placeholder="Enter amount" id="amount" value="1"> 
 
         <div id="dropdowns">
-            <div class="inputs"> 
+            <div class="inputs">
                 <p>From Currency</p>
                 <img src="" id="from-flag" alt="from-flag" class="flag">
 
@@ -29,11 +30,11 @@
 
                 <select id="to-select" class="select-tag" name="to">
                 </select>
-            </div> 
+            </div>
 
         </div>
-        
-        <div id="outputs-div"> 
+
+        <div id="outputs-div">
             <p id="result">result</p>
             <button id="btn">convert</button>
         </div>

@@ -1,7 +1,7 @@
-# Javascript Practice 
+# Javascript Small Projects
 
 - I used html, css and js to build small projects. 
-- Main purpose: practicing js. 
+- Main purpose: practicing js.  
 
 ## How to Run the Projects? 
 - Download the zip of this repo. 
